@@ -3,12 +3,17 @@ button {
   border-radius: 0.3rem;
   padding: 0.6rem;
   cursor: pointer;
+
+  font-family: IBM Plex Sans;
+  line-height: 150%;
 }
 
 .redirect-edit__button {
   border: 1px solid var(--gray600);
   background-color: var(--gray900);
   color: var(--gray100);
+  font-size: 16px;
+  font-weight: 500;
 }
 
 .redirect-edit__button:hover {
@@ -27,6 +32,7 @@ button {
 .confirm__button {
   background-color: var(--brand100);
   color: var(--gray900);
+  font-size: 16px;
 }
 
 .confirm__button:hover {
