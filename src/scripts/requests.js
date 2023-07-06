@@ -13,7 +13,7 @@ export async function register(userBody) {
         const resJson = await res.json();
         
         if (res.ok) {
-            toast('Usuário cadastrado com sucesso!', 'Agora você pode acessar o conteúdo utilizando seu usuário e senha.', 'green');
+            toast('Usuário cadastrado com sucesso!', 'Você será redirecionado para a pagina de login.', 'green');
 
             //Limpando valor dos inputs
             let inputs = document.querySelectorAll('input');

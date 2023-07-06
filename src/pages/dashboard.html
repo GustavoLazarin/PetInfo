@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Petinfo - Home</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles/globalStyles.css">
+    <link rel="stylesheet" href="../styles/dashboard.css">
+
+    <!-- SCRIPT JS -->
+    <script type="module" src="../scripts/dashboard.js" defer></script>
+</head>
+<body>
+    <header class="header">
+        <h2 class="header__logo">Petinfo</h2>
+        <div>
+            <button class="confirm__button">Criar publicação</button>
+            <img class="profile-img" src="https://i.pinimg.com/originals/82/23/e6/8223e6f2684080d0427d1688d02875a8.jpg" alt="user-img">
+        </div>
+    </header>
+    <main>
+        <section class="feed">
+            <div class="feed__header">
+                <h2>Feed</h2>
+            </div>
+            <ul class="feed__posts-list">
+
+                <!-- EXEMPLO DE POST -->
+                <li class="feed__post">
+                    <div class="post__header">
+                        <div class="post__info">
+                            <div class="post__user-info">
+                                <img src="https://i.pinimg.com/originals/82/23/e6/8223e6f2684080d0427d1688d02875a8.jpg" alt="user-img">
+                                <h3 class="post__user-name">User Name</h3>
+                            </div>
+                            <p class="user-info__divisor">|</p>
+                            <p class="post__date">Julho de 2023</p>
+                        </div>
+                        <!-- SE O POST FOR DO USUÁRIO -->
+                        <div class="post__edit">
+                            <button class="redirect-edit__button">Editar</button>
+                            <button class="close-cancel__button">Excluir</button>
+                        </div>
+                    </div>
+                    <div class="post__content">
+                        <h2 class="post__title">Titulo do Post</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos repellendus modi voluptates illo adipisci. In non quas pariatur labore vitae eius deserunt quod!</p>
+                        <button class="show-more">Acessar publicação</button>
+                    </div>
+                </li>
+
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

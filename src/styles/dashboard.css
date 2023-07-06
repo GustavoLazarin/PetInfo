@@ -1,0 +1,154 @@
+body {
+    background-color: var(--gray900);
+    width: 100vw;
+    padding-bottom: 60px;
+}
+
+.header {
+    height: 172px;
+    padding: 0px 466px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.header > div {
+    display: flex;
+}
+
+.header > button {
+    height: 38px;
+    padding: 0px 16px;
+}
+
+.profile-img {
+    height: 41px;
+    width: 41px;
+    margin-left: 12px;
+
+    border: 1px solid var(--brand100);
+    border-radius: 50%;
+}
+
+.feed {
+    padding: 0px 466px;
+    margin-top: 102px;
+
+    position: relative;
+}
+
+.feed__header{
+    padding: 0px 466px;
+    width: 100vw;
+    height: 64px;
+    background-color: var(--gray800);
+
+    position: absolute;
+    top: -102px;
+    left: 0;
+    display: flex;
+    align-items: center;
+}
+
+.feed__header > h2 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.feed__posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 64px;
+}
+
+.feed__post {
+    display: flex;
+    flex-direction: column;
+
+    gap: 24px;
+}
+
+.post__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.post__info , .post__user-info, .post__edit{
+    display: flex;
+    gap: 12px;
+
+    align-items: center;
+}
+
+.user-info__divisor {
+    color: var(--gray600);
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.post__user-info {
+    gap: 8px;
+}
+
+.post__user-info > img {
+    height: 32px;
+    width: 32px;
+    border-radius: 50%;
+}
+
+.post__user-name {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.post__date {
+    color: var(--gray400);
+    font-size: 14px;
+}
+
+.redirect-edit__button, .close-cancel__button {
+    height: 32px;
+    padding: 0px 8px;
+    font-size: 14px;
+}
+
+.post__content {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post__title {
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.post__content > p {
+    color: var(--gray300);
+    font-size: 16px;
+    line-height: 150%;
+}
+
+.show-more {
+    padding: 0;
+    color: var(--brand100);
+    font-size: 16px;
+    font-weight: 500;
+    border: none;
+    background: transparent;
+}
+
+.show-more:hover {
+    color: var(--brand200);
+}
