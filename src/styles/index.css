@@ -1,0 +1,90 @@
+body {
+    background-color: var(--gray900);
+    color: var(--gray100);
+}
+
+.reverse {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.introduction {
+    align-items: flex-end;
+    margin-right: 20px;
+}
+
+.introduction__title {
+    font-weight: 600;
+}
+
+.introduction__container {
+    width: 391px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.introduction__subtitle {
+    color: var(--gray100);
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 150%;
+}
+
+.introduction__text {
+    width: 320px;
+}
+
+.login {
+    width: 50%;
+    height: 100%;
+    margin-left: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.login__form {
+    display: flex;
+    width: 368px;
+    padding: 44px 24px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 26px;
+
+    border-radius: 4px;
+    border: 1px solid var(--gray600);
+}
+
+.login__header > h2 {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.input-container > p {
+    color: var(--alert100);
+    line-height: 150%;
+}
+
+.signup-info {
+    height: 83px;
+    text-align: center;
+    
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.signup-info > h3 {
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 150%;
+}
+
+.signup-info > p {
+    color: var(--gray300);
+    line-height: 150%;
+}
+

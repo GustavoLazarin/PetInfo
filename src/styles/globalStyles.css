@@ -1,26 +1,39 @@
+@import url('./reset.css');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Inter&display=swap');
+@import url('./toast.css');
+@import url('./forms.css');
+@import url('./buttons.css');
 
 :root {
-  --brand100: #374fc8;
-  --brand200: #3a55d9;
-  --gray100: #22262a;
-  --gray200: #353b41;
-  --gray300: #484f56;
-  --gray400: #878f97;
-  --gray500: #adb5bd;
-  --gray600: #eaedf0;
-  --gray700: #f0f2f4;
-  --gray800: #f9fafb;
-  --gray900: #fafdff;
-  --alert100: #c83751;
-  --alert200: #db3d5a;
-  --sucess100: #087d5a;
+  --brand100: #364FC7;
+  --brand200: #3B56D9;
+  --gray100: #212529;
+  --gray200: #343A40;
+  --gray300: #495057;
+  --gray400: #868E96;
+  --gray500: #ADB5BD;
+  --gray600: #E9ECEF;
+  --gray700: #F1F3F5;
+  --gray800: #F8F9FA;
+  --gray900: #FCFEFF;
+  --alert100: #C73650;
+  --alert200: #DB3C58;
+  --sucess100: #087F5B;
 
   --border-gray: #D9D9D9;
 }
 
+
 body {
   font-family: 'IBM Plex Sans', sans-serif;
+
+  overflow: hidden;
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
 }
 
 .container {
@@ -39,61 +52,11 @@ dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-
-/* REGISTER */
-main{
-  width: 100vw;
-  height: 100vh;
-  background-color: var(--gray900);
-  font-weight: 500;
-  color: var(--gray100);
-  line-height: 150%;
-
-  display: flex;
+.primary {
+  color: var(--brand100);
 }
 
-.register {
-  width: 50%;
-  height: 100%;
-  padding-right: 55px;
 
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-}
-
-.register__form {
-  width: 369px;
-  border: 1px solid var(--border-gray);
-  border-radius: 4px;
-  background: var(--gray900);
-
-  padding: 44px 24px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 26px;
-}
-
-.register__header {
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.register__header h2 {
-  font-size: 20px;
-}
-
-.register__header button {
-  height: 32px;
-  font-size: 14px;
-  font-weight: 500;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 
 .register__form > div, .register__form > button, .register__form > label {
   display: flex;
@@ -101,6 +64,7 @@ main{
 }
 
 .input-container {
+  display: flex;
   flex-direction: column;
   gap: 12px;
 }
@@ -112,26 +76,9 @@ main{
   font-weight: 500;
 }
 
+/* Outdoor */
 
-
-/* INPUT */
-
-input {
-  padding: 0px 16px;
-  height: 44px;
-  border: 1px solid var(--grey-6, #E9ECEF);
-  border-radius: 4px;
-  color: var(--gray100);
-  font-size: 16px;
-  background: var(--grey-8, #F8F9FA);
-}
-
-input::placeholder{
-  color: var(--gray400);
-}
-
-/* APRESENTATION */
-.apresentation {
+.introduction {
   width: 50%;
   padding-left: 55px;
 
@@ -141,22 +88,23 @@ input::placeholder{
   gap: 24px;
 }
 
-.apresentation__title {
-      font-size: 32px;
-      font-weight: 500;
-      line-height: 150%;
+.introduction__title {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 150%;
 }
 
-.apresentation .primary {
-  color: var(--brand-1, #364FC7);
+.introduction .primary {
+  color: var(--brand100);
   font-size: 32px;
   font-weight: 600;
   line-height: 150%;
 }
 
-.apresentation__text {
-  color: var(--grey-3, #495057);
-  width: 320px;
+.introduction__text {
+  color: var(--gray300);
+  font-size: 16px;
+  line-height: 150%;
 }
 
 
@@ -169,4 +117,3 @@ input::placeholder{
 .images-container .box-right {
   flex-direction: column; 
 }
-

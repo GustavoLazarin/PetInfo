@@ -1,12 +1,6 @@
-const baseUrl = "http://localhost:3333"
+import { toast } from "./toast.js";
 
-// USUARIO DE TESTE -> DELETAR
-// const user = {
-//     username: "Lazarin2",
-//     email: "lazaringustavo11@mail.com",
-//     password: "123456",
-//     avatar: "https://unsplash.com/s/photos/human"
-// }
+const baseUrl = "http://localhost:3333"
 
 export async function register(userBody) {
     const request = await fetch(`${baseUrl}/users/create`,{
@@ -19,12 +13,41 @@ export async function register(userBody) {
         const resJson = await res.json();
         
         if (res.ok) {
-            console.log('Usuário cadastrado com sucesso!') //AJUSTAR CONSOLE PARA TOAST!
+            toast('Usuário cadastrado com sucesso!', 'Agora você pode acessar o conteúdo utilizando seu usuário e senha.', 'green');
+
+            //Limpando valor dos inputs
+            let inputs = document.querySelectorAll('input');
+            inputs.forEach(input => input.value = '');
+            
             return resJson;
         } else {
             throw new Error(resJson.message);
         }
     }).catch(err => {
-        console.log(err.message) //AJUSTAR CONSOLE PARA TOAST!
+        toast('Oops, verifique as infoemações e tente novamente.', err.message, 'red');
+    })   
+}
+
+export async function login(userBody) {
+    const request = await fetch(`${baseUrl}/login`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(userBody)
+    }).then(async res => {
+        const resJson = await res.json();
+
+        if (res.ok) {
+            const token = resJson.token;
+            localStorage.setItem('@petInfo:token', token)
+            toast('Usuário logado com sucesso!', 'Bem-vindo, você sera redirecionado imediatamente.', 'green', './src/assets/alarm-ico.png')
+            return res;
+        } else {
+            throw new Error(resJson.message);
+        }
+    }).catch(err => {
+        return err.message;
     })
+    return request
 }

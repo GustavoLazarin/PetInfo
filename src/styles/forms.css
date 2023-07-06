@@ -1,0 +1,18 @@
+input {
+    padding: 0px 16px;
+    height: 44px;
+    border: 1px solid var(--grey-6, #E9ECEF);
+    border-radius: 4px;
+    color: var(--gray100);
+    font-size: 16px;
+    background: var(--grey-8, #F8F9FA);
+}
+  
+input::placeholder{
+    color: var(--gray400);
+}
+
+label {
+    font-weight: 500;
+    line-height: 150%;
+}
