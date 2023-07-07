@@ -29,13 +29,11 @@
 body {
   color: var(--gray100);
   font-family: 'IBM Plex Sans', sans-serif;
-  
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 main {
   width: 100vw;
-  height: 100vh;
   display: flex;
 }
 

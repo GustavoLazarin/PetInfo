@@ -11,7 +11,7 @@
     right: 0;
   
     box-shadow: 0px 4px 40px -12px rgba(0, 0, 0, 0.25);
-    animation: fade-in 1s;
+    animation: logout-fade-in 1s;
   }
   
   .logout__username {
@@ -51,7 +51,7 @@
     background-color: var(--gray700);
   }
 
-  @keyframes fade-in {
+  @keyframes logout-fade-in {
     0% {
       transform: translateY(-49%) scale(0);
     }

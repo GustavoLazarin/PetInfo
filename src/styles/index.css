@@ -1,6 +1,11 @@
 body {
+    overflow: hidden;
     background-color: var(--gray900);
     color: var(--gray100);
+}
+
+main {
+    height: 100vh;
 }
 
 .reverse {

@@ -1,4 +1,4 @@
-import { login } from "./requests.js";
+import { getUser, login } from "./requests.js";
 import { toast } from "./toast.js";
 
 const handleLogin = () => {
@@ -40,6 +40,7 @@ const handleLogin = () => {
             const loginRequest = await login(userBody);
 
             if (loginRequest.ok) { //Sucesso! Redirecionamento :D
+                getUser()
                 setTimeout(() => {
                     location.replace('./src/pages/dashboard.html')
                 }, 6000)

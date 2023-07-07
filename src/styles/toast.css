@@ -18,8 +18,7 @@
 
     cursor: default;
 
-    animation: fade-in ease-out;
-    animation-duration: 2s;
+    animation: fade-in 2s ease-out;
 }
 
 h2 {
