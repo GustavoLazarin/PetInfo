@@ -21,6 +21,7 @@ body {
 
 .header > div {
     display: flex;
+    position: relative;
 }
 
 .header > button {
@@ -151,4 +152,5 @@ body {
 
 .show-more:hover {
     color: var(--brand200);
+    text-decoration: underline;
 }

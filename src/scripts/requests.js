@@ -51,3 +51,19 @@ export async function login(userBody) {
     })
     return request
 }
+
+export async function getUser() {
+    const token = localStorage.getItem('@petInfo:token');
+    const user = await fetch(`${baseUrl}/users/profile`, {
+        method: 'GET',
+        headers: {
+            Authorization: `Bearer ${token}`
+        }
+    }).then(async res => {
+        const resJson = await res.json();
+
+        if (res.ok) {
+            localStorage.setItem('@PetInfo:user', JSON.stringify(resJson));
+        }
+    })
+}
