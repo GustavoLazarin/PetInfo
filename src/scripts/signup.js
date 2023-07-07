@@ -25,6 +25,10 @@ const handleSignUp = () => {
             setTimeout(() => {
                 location.replace('../../')
             }, 6000)
+
+            //Efeito de loading
+            const loadButton = document.querySelector('.confirm__button');
+            loadButton.innerHTML = '<img src="../assets/spinner.png" alt="loading-spinner" class="spinner">'
         }
     })
 }

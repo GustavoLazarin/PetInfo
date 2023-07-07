@@ -44,6 +44,10 @@ const handleLogin = () => {
                 setTimeout(() => {
                     location.replace('./src/pages/dashboard.html')
                 }, 6000)
+
+                //Efeito de loading
+                const loadButton = document.querySelector('.confirm__button');
+                loadButton.innerHTML = '<img src="./src/assets/spinner.png" alt="loading-spinner" class="spinner">'
             } else {  //Lógica para feedback visual em caso de informações incorretas
                 const inputContainers = document.querySelectorAll('.input-container');
                 const missAlert = document.querySelector('.miss-alert');

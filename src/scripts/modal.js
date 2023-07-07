@@ -26,7 +26,6 @@ function handleCloseModal() {
     
     closeButtons.forEach(button => {
         button.addEventListener('click', () => {
-            modal.close();
             modal.remove();
         })
     })
@@ -165,7 +164,7 @@ function postEditorModal(body, post) {
 
         await updatePost(id, postBody);
         renderPosts()
-        modal.close()
+        modal.remove()
     })
 
     
@@ -214,6 +213,6 @@ function postDeleteModal(body, post) {
     deleteButton.addEventListener('click', async () => {
         await deletePost(post[0].id)
         renderPosts()
-        modal.close();
+        modal.remove();
     })
 }
