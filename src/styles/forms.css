@@ -1,4 +1,4 @@
-input {
+input, textarea {
     padding: 0px 16px;
     height: 44px;
     border: 1px solid var(--grey-6, #E9ECEF);
@@ -6,6 +6,19 @@ input {
     color: var(--gray100);
     font-size: 16px;
     background: var(--grey-8, #F8F9FA);
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+textarea {
+    padding: 10px 17px;
+    height: auto;
+    font-family: IBM Plex Sans;
+    line-height: 150%;
 }
   
 input::placeholder{

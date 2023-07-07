@@ -2,18 +2,6 @@ import { register } from "./requests.js";
 import { toast } from "./toast.js";
 
 const handleSignUp = () => {
-    /*
-    1- Capturar todos os inputs - OK
-    2- Capturar o botao de submit - OK
-    3- Criar um obj user vazio - OK
-    4- Percorrer todos inputs, e resgatar o value - OK
-        4.1- Para cada value, adicionar uma nova chave ao obj - OK
-    5- Adicionar um evento de clique no botao - OK
-        5.1- Prevenir default - OK
-        5.2- Chamar a request signup, enviando o obj user como parametro - OK
-    6- Informar o usuário se o cadastro foi bem sucedido ou nao      <-        <-        --> ADICIONAR TOAST !!! <--
-    */
-
     const inputs = document.querySelectorAll('.register__form input');
     const submitButton = document.querySelector('.confirm__button');
     const userBody = {};
@@ -34,6 +22,13 @@ const handleSignUp = () => {
             count = 0;
         } else {
             register(userBody);
+            setTimeout(() => {
+                location.replace('../../')
+            }, 6000)
+
+            //Efeito de loading
+            const loadButton = document.querySelector('.confirm__button');
+            loadButton.innerHTML = '<img src="../assets/spinner.png" alt="loading-spinner" class="spinner">'
         }
     })
 }

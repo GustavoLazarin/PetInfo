@@ -1,4 +1,7 @@
-/* SIGN UP */
+body {
+  overflow: hidden;
+}
+
 main{
     width: 100vw;
     height: 100vh;
@@ -6,6 +9,7 @@ main{
     font-weight: 500;
     color: var(--gray100);
     line-height: 150%;
+
   
     display: flex;
   }
@@ -43,12 +47,24 @@ main{
     font-size: 20px;
   }
   
-  .register__header button {
-    height: 32px;
-    font-size: 14px;
-    font-weight: 500;
-  
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+.register__header button {
+  height: 32px;
+  font-size: 14px;
+  font-weight: 500;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.register__form > div, .register__form > button, .register__form > label {
+  display: flex;
+  width: 100%;
+}
+
+.register__form > button {
+  display: flex;
+  justify-content: center;
+  height: 38px;
+  font-weight: 500;
+}
