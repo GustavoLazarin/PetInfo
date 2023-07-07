@@ -1,22 +1,40 @@
+@import url('./reset.css');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600;700&family=Inter&display=swap');
+@import url('./toast.css');
+@import url('./forms.css');
+@import url('./buttons.css');
+@import url('./modal.css');
+@import url('./logout.css');
+
 :root {
-  --brand100: hsl(230, 57%, 50%);
-  --brand200: hsl(230, 68%, 54%);
-  --gray100: hsl(210, 11%, 15%);
-  --gray200: hsl(210, 10%, 23%);
-  --gray300: hsl(210, 9%, 31%);
-  --gray400: hsl(210, 7%, 56%);
-  --gray500: hsl(210, 11%, 71%);
-  --gray600: hsl(210, 16%, 93%);
-  --gray700: hsl(210, 17%, 95%);
-  --gray800: hsl(210, 17%, 98%);
-  --gray900: hsl(200, 100%, 99%);
-  --alert100: hsl(349, 57%, 50%);
-  --alert200: hsl(349, 69%, 55%);
-  --sucess100: hsl(162, 88%, 26%);
+  --brand100: #364FC7;
+  --brand200: #3B56D9;
+  --gray100: #212529;
+  --gray200: #343A40;
+  --gray300: #495057;
+  --gray400: #868E96;
+  --gray500: #ADB5BD;
+  --gray600: #E9ECEF;
+  --gray700: #F1F3F5;
+  --gray800: #F8F9FA;
+  --gray900: #FCFEFF;
+  --alert100: #C73650;
+  --alert200: #DB3C58;
+  --sucess100: #087F5B;
+
+  --border-gray: #D9D9D9;
 }
 
+
 body {
-  font-family: "Inter, sans-serif";
+  color: var(--gray100);
+  font-family: 'IBM Plex Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+main {
+  width: 100vw;
+  display: flex;
 }
 
 .container {
@@ -33,4 +51,61 @@ dialog {
 
 dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+.primary {
+  color: var(--brand100);
+}
+
+/* Outdoor */
+
+.introduction {
+  width: 50%;
+  padding-left: 55px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+}
+
+.introduction__title {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 150%;
+}
+
+.introduction .primary {
+  color: var(--brand100);
+  font-size: 32px;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.introduction__text {
+  color: var(--gray300);
+  font-size: 16px;
+  line-height: 150%;
+}
+
+.images-container, .box-right, .box-right__top {
+  display: flex;
+  gap: 18px;
+}
+
+.images-container .box-right {
+  flex-direction: column; 
+}
+
+.spinner {
+  animation: spinner-rotate 1s infinite linear;
+}
+
+@keyframes spinner-rotate {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
