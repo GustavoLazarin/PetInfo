@@ -85,8 +85,7 @@ const postCreatorModal = (body) => {
         } else {
             // Chamando a função que cria o Post!
             await createPost(objPost)
-            modal.remove();
-            console.log('Criado!')
+            modal.remove()
             await renderPosts()
         }
     })
