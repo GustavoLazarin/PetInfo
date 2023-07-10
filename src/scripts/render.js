@@ -3,8 +3,6 @@ import { getAllPosts } from "./requests.js";
 
 export async function renderPosts() {
     const postsArray = await getAllPosts();
-
-    console.log(`Renderizando ${postsArray.length} posts!`)
     
     const loggedUser =  JSON.parse(localStorage.getItem('@petInfo:user'));
 
