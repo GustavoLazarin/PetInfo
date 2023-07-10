@@ -17,7 +17,7 @@ const showUserProfile = () => {
     const userName = document.querySelector('.logout__username');
 
     profileImg.src = user.avatar;
-    userName.innerHTML = user.username;
+    userName.innerHTML = `@${user.username}`;
 }
 
 const handleHeader = () => {
