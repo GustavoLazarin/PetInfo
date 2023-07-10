@@ -101,6 +101,7 @@ export async function createPost(postBody) {
         if(res.ok) {
             return resJson;
         }
+        return resJson;
     })
 }
 

@@ -60,7 +60,7 @@ const postCreatorModal = (body) => {
     const publishButton = document.querySelector('.modal__container .confirm__button')
     const objPost = {};
 
-    publishButton.addEventListener('click', () => {
+    publishButton.addEventListener('click', async () => {
         const modal = document.querySelector('.modal__controller');
         let count = 0;
         
@@ -84,11 +84,11 @@ const postCreatorModal = (body) => {
             count = 0;
         } else {
             // Chamando a função que cria o Post!
-            createPost(objPost)
+            await createPost(objPost)
             modal.remove();
+            console.log('Criado!')
+            await renderPosts()
         }
-        
-        renderPosts(getAllPosts())
     })
 }
 
@@ -123,7 +123,7 @@ function postReaderModal(body, post) {
     `)
 }
 
-function postEditorModal(body, post) {
+async function postEditorModal(body, post) {
 
     const {id, title, content} = post[0]
 
@@ -163,7 +163,7 @@ function postEditorModal(body, post) {
         inputs.forEach(input => postBody[input.name] = input.value);
 
         await updatePost(id, postBody);
-        renderPosts()
+        await renderPosts()
         modal.remove()
     })
 
@@ -212,7 +212,7 @@ function postDeleteModal(body, post) {
     //Adicionando funcionalidade ao botão delete
     deleteButton.addEventListener('click', async () => {
         await deletePost(post[0].id)
-        renderPosts()
+        await renderPosts()
         modal.remove();
     })
 }
